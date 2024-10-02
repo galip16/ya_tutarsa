@@ -1,0 +1,33 @@
+# Node.js modülleri
+/web/node_modules
+/backend/node_modules
+
+# Lock dosyaları
+/web/package-lock.json
+/backend/package-lock.json
+
+# Genel klasörler
+dist/
+build/
+coverage/
+
+# Log dosyaları
+*.log
+
+# Environment dosyaları
+.env
+.env.local
+.env.*.local
+
+# VSCode ve IDE dosyaları
+.vscode/
+*.code-workspace
+
+# MacOS sistem dosyaları
+.DS_Store
+
+# Linux sistem dosyaları
+*.swp
+
+# Windows sistem dosyaları
+Thumbs.db
