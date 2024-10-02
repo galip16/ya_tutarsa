@@ -1,7 +1,7 @@
 # ya_tutarsa
-Zengin olmak icin bize katil
+### Zengin olmak icin bize katil
 
-
+----------
 
 App's basic logic
 
