@@ -14,11 +14,6 @@ coverage/
 # Log dosyaları
 *.log
 
-# Environment dosyaları
-.env
-.env.local
-.env.*.local
-
 # VSCode ve IDE dosyaları
 .vscode/
 *.code-workspace
@@ -31,3 +26,4 @@ coverage/
 
 # Windows sistem dosyaları
 Thumbs.db
+apps/backend/.env
