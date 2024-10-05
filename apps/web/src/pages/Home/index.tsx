@@ -26,6 +26,7 @@ const Home: React.FC<Props> = ({ }) => {
             {data.map((match, index) => (
                 <MatchCard key={index} date={match.date} team1={match.team1} team2={match.team2} />
             ))}
+            <p>Vercel Preview Test</p>
         </Wrapper>
     )
 }
