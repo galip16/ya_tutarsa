@@ -3,7 +3,6 @@ import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import http from "http";
 import express from "express";
 import cors from "cors";
-
 import typeDefs from './schema';
 import resolvers from './resolvers';
 
@@ -20,6 +19,7 @@ const startApolloServer = async(app: any, httpServer: any) => {
   });
 
   await server.start();
+  console.log("Apollo Server started")
   server.applyMiddleware({ app });
 }
 
