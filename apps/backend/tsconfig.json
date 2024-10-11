@@ -8,7 +8,15 @@
       "moduleResolution": "node",
       "esModuleInterop": true,
       "types": ["node"]
+    },
+    "tsc-alias": {
+    "verbose": false,
+    "resolveFullPaths": true,
+    "fileExtensions": {
+      "inputGlob": "{js,jsx,mjs}",
+      "outputCheck": ["js", "json", "jsx", "mjs"]
     }
+  }
   }
 
   

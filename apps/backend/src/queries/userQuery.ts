@@ -7,6 +7,6 @@ export const userQuery = {
     return await prisma.user.findMany();
   },
   user: async (_: any, args: { id: string }) => {
-    return await prisma.user.findUnique({ where: { id: +args.id } });
+    return await prisma.user.findUnique({ where: { id: args.id } });
   },
 };
