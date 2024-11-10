@@ -26,7 +26,7 @@ export const typeDefs = `#graphql
 
   type Mutation {
     createUser(id: String!, name: String!, email: String!): User!
-    saveMatches: [Match!]!
+    saveMatches: Boolean!
   }
 
   # The "Query" type is special: it lists all of the available queries that

@@ -10,4 +10,8 @@ export interface Match {
   export interface GetMatchesData {
     matches: Match[];
   }
+
+  export interface SaveMatchesMutationData {
+    saveMatches: boolean;  
+  }
   
