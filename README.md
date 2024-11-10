@@ -17,3 +17,9 @@ Each betting category (under 3 goals, over 3 goals, first goal's minute etc.) wi
 There won't be categories like who will win because we don't want to identify the favorite teams in the first place. (later we can do this with ai maybe)
 
 Each category will also have a factor and the credit invested will be multiplied by this factor and this point will be added to the member if it is won or deducted from the member if it is lost.
+
+
+
+### npx prisma migrate dev
+### npm start
+### http://localhost:3000/

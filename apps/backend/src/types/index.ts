@@ -9,6 +9,7 @@ export const typeDefs = `#graphql
   }
 
   type Match {
+    id:ID!
     date: String!
     homeTeam: String!
     awayTeam: String!

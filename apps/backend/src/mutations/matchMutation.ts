@@ -1,10 +1,11 @@
 import prisma from "../../prisma";
 import { getMatchInfo } from "../utils/getMatchInfo";
+import { teams } from "./teams";
 
 export const matchMutation = {
     saveMatches: async () => {  
-        
-        const teams = ["galatasaray/riaqqurF/", "fenerbahce/MsbmracL/"];
+
+
 
         const allMatches = [];
 
