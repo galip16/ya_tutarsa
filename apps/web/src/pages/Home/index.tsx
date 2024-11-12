@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         <>
             <Wrapper>
                 {data.matches.map((match, index) => (
-                    <MatchCard key={index} date={parseMatchDate(match.date)} team1={match.homeTeam} team2={match.awayTeam} />
+                    <MatchCard key={index} date={parseMatchDate(match.date)} team1={match.homeTeam} team2={match.awayTeam} matchId={match.id} />
                 ))}
             </Wrapper>
 
