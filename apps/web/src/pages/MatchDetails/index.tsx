@@ -10,7 +10,6 @@ const MatchDetails = () => {
 
   const matchId = Number(id);
 
-
   const { data, loading, error } = useQuery<Match>(GET_MATCH, { variables: { id:matchId } });
 
   if (loading) {
@@ -26,10 +25,6 @@ const MatchDetails = () => {
       <p>Error</p>
     )
   };
-
-  console.log(data);
-
-
 
 
   return (
