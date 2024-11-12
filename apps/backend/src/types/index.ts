@@ -8,13 +8,25 @@ export const typeDefs = `#graphql
     email: String!
   }
 
+  type Match {
+    id:ID!
+    date: String!
+    homeTeam: String!
+    awayTeam: String!
+    homeScore: Int
+    awayScore: Int
+  }
+
   type Query {
     users: [User!]!
     user(id: ID!): User
+    match(id:ID!):Match
+    matches: [Match!]!
   }
 
   type Mutation {
     createUser(id: String!, name: String!, email: String!): User!
+    saveMatches: Boolean!
   }
 
   # The "Query" type is special: it lists all of the available queries that
