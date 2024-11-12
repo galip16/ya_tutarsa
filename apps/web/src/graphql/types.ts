@@ -11,6 +11,10 @@ export interface Match {
     matches: Match[];
   }
 
+  export interface GetMatchData {
+    match: Match;
+  }
+
   export interface SaveMatchesMutationData {
     saveMatches: boolean;  
   }
