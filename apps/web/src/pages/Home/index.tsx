@@ -6,6 +6,7 @@ import { GET_MATCHES } from '../../graphql/query.ts';
 import { GetMatchesData, SaveMatchesMutationData } from '../../graphql/types.ts';
 import { parseMatchDate } from '../../utils/parseMatchDate.ts';
 import { SAVE_MATCHES } from '../../graphql/mutation.ts';
+import BasketIcon from '../../components/Basket/BasketIcon.tsx';
 
 const Home: React.FC = () => {
 
@@ -65,6 +66,8 @@ const Home: React.FC = () => {
                     <button onClick={getNewMatches}>Maclari Yenile</button>
                 </div>
             )}
+
+            <BasketIcon/>
         </>
     )
 }

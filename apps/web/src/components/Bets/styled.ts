@@ -8,7 +8,9 @@ export const Container = styled.div`
   margin: 4rem;
 `;
 
-export const Card = styled.div`
+export const Card = styled.div<{$isAlreadyInBasket:boolean}>`
+
+background-color: ${( {$isAlreadyInBasket} )=> $isAlreadyInBasket ? "#ddd" : "initial"  };
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;

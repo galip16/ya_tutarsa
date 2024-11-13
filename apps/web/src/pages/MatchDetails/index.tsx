@@ -1,13 +1,18 @@
 import { useQuery } from '@apollo/client';
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { GET_MATCH } from '../../graphql/query';
 import { GetMatchData } from '../../graphql/types';
 import { Details } from './styled';
 import { Bets } from '../../components/Bets';
+import { Bet } from '../../components/Basket';
+import BasketIcon from '../../components/Basket/BasketIcon';
 
+interface Props {
+  setUserBets:React.Dispatch<React.SetStateAction<Bet[]>>
+}
 
-const MatchDetails = () => {
+const MatchDetails:React.FC<Props> = ({setUserBets}) => {
   const { id } = useParams<{ id: string }>();
 
   const matchId = Number(id);
@@ -36,7 +41,9 @@ const MatchDetails = () => {
       <p>{data.match.date}</p>
       <p> {data.match.homeTeam}-{data.match.awayTeam} </p>
     </Details>
-    <Bets/>
+    <Bets setUserBets={setUserBets} match={data.match} />
+    <Link to='/' >Home</Link>
+    <BasketIcon/>
    </>
   )
 }
