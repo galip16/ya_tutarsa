@@ -2,7 +2,9 @@ import { useQuery } from '@apollo/client';
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { GET_MATCH } from '../../graphql/query';
-import { Match } from '../../graphql/types';
+import { GetMatchData } from '../../graphql/types';
+import { Details } from './styled';
+import { Bets } from '../../components/Bets';
 
 
 const MatchDetails = () => {
@@ -10,7 +12,7 @@ const MatchDetails = () => {
 
   const matchId = Number(id);
 
-  const { data, loading, error } = useQuery<Match>(GET_MATCH, { variables: { id:matchId } });
+  const { data, loading, error } = useQuery<GetMatchData>(GET_MATCH, { variables: { id:matchId } });
 
   if (loading) {
     return (
@@ -18,7 +20,7 @@ const MatchDetails = () => {
     )
   };
 
-  if (error) {
+  if (error || !data) {
     console.log(error);
 
     return (
@@ -28,10 +30,14 @@ const MatchDetails = () => {
 
 
   return (
-    <>
+   <>
+    <Details>
       <div>MatchDetails</div>
-      <p>{id}</p>
-    </>
+      <p>{data.match.date}</p>
+      <p> {data.match.homeTeam}-{data.match.awayTeam} </p>
+    </Details>
+    <Bets/>
+   </>
   )
 }
 
