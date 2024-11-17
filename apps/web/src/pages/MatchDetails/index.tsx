@@ -6,7 +6,6 @@ import { GetMatchData } from '../../graphql/types';
 import { Details } from './styled';
 import { Bets } from '../../components/Bets';
 import { Bet } from '../../components/Basket';
-import BasketIcon from '../../components/Basket/BasketIcon';
 
 interface Props {
   setUserBets:React.Dispatch<React.SetStateAction<Bet[]>>
@@ -43,7 +42,6 @@ const MatchDetails:React.FC<Props> = ({setUserBets}) => {
     </Details>
     <Bets setUserBets={setUserBets} match={data.match} />
     <Link to='/' >Home</Link>
-    <BasketIcon/>
    </>
   )
 }

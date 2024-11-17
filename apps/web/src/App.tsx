@@ -9,6 +9,7 @@ import { ThemeProvider } from './theme/themeContext';
 import BasketPage from './pages/Basket';
 import { Bet } from './components/Basket';
 import { getBetsFromLocalStorage, saveBetsToLocalStorage } from './utils/storage';
+import Navbar from './components/Navbar';
 
 
 const App: React.FC = () => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Router>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/match/:id" element={<MatchDetails setUserBets={setUserBets} />} />

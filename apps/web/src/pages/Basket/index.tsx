@@ -1,7 +1,5 @@
-// BasketPage.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import Basket, { Bet } from '../../components/Basket';
-import { Link } from 'react-router-dom';
 
 interface Props {
     userBets: Bet[];
@@ -19,9 +17,6 @@ const BasketPage: React.FC<Props> = ({userBets, setUserBets}) => {
     <div>
       <h1>Your Basket</h1>
       <Basket basket={userBets} setUserBets={setUserBets} onConfirm={handleConfirmBets}  />
-      <Link to='/'>
-      Home
-      </Link>
     </div>
   );
 };
