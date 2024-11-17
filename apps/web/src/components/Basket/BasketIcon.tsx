@@ -2,14 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
-
 const IconContainer = styled.div`
-  position: fixed;
-  top: 20px;
-  right: 5px;
   cursor: pointer;
-  z-index: 1000;
 `;
 
 const Icon = styled.div`
