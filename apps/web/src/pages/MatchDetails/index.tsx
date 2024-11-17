@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 import React from 'react'
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { GET_MATCH } from '../../graphql/query';
 import { GetMatchData } from '../../graphql/types';
 import { Details } from './styled';
@@ -41,7 +41,6 @@ const MatchDetails:React.FC<Props> = ({setUserBets}) => {
       <p> {data.match.homeTeam}-{data.match.awayTeam} </p>
     </Details>
     <Bets setUserBets={setUserBets} match={data.match} />
-    <Link to='/' >Home</Link>
    </>
   )
 }

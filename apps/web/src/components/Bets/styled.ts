@@ -17,7 +17,7 @@ background-color: ${( {$isAlreadyInBasket} )=> $isAlreadyInBasket ? "#ddd" : "in
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  cursor: pointer;
+  cursor: ${( {$isAlreadyInBasket} )=> $isAlreadyInBasket ? "not-allowed" : "pointer"  };
   
   &:hover {
     transform: scale(1.05);
